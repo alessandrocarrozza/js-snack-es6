@@ -4,43 +4,43 @@
 const soccerTeams = [
     {
         teamName : "napoli",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "juventus",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "cremonese",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "atalanta",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "benevento",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "torino",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "roma",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     },
     {
         teamName : "lazio",
-        "punti fatti" : 0,
-        "falli subiti" : 0,
+        puntiFatti : 0,
+        falliSubiti : 0,
     }
 ];
 
@@ -48,15 +48,14 @@ console.log(soccerTeams);
 
 
 
-for (let i = 0; i < soccerTeams.length; i++) {
-
-    soccerTeams[i]["punti fatti"] = generateRandomNumber(1, 80);
-    soccerTeams[i]["falli subiti"] = generateRandomNumber(1, 30);
-}
-
+soccerTeams.forEach(element => {
+    element.puntiFatti = generateRandomNumber(1, 80);
+    element.falliSubiti = generateRandomNumber(1, 40);
+});
 
 
-const teamNomeFalli = soccerTeams.map(({teamName, ["falli subiti"]:falliSubiti}) => {
+
+const teamNomeFalli = soccerTeams.map(({teamName, falliSubiti}) => {
     return {teamName, falliSubiti};
 });
 
