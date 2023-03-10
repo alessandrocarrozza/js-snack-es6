@@ -13,11 +13,11 @@ const bicycles = [
     },
     {
         name : "casati",
-        weight : 15,
+        weight : 8,
     },
     {
         name : "bottecchia",
-        weight : 8,
+        weight : 15,
     }
 ];
 console.log(bicycles);
@@ -25,19 +25,26 @@ console.log(bicycles);
 // collegamento al DOM
 const bicycleResultDom = document.getElementById("bicycle-result");
 
-let biciWeight = bicycles[0].weight;
+// variabile di partenza che conterrà il peso piu' basso
+let lowerWeight = bicycles[0].weight;
 
+// variabile che conterrà il nome della bici piu' leggera
+let = nameBicycle = "";
 
-for (let i = 0; i < bicycles.length; i++) {
+// ciclo per determinare la bici piu' leggera
+bicycles.forEach(element => {
+    const {weight} = element;
 
-    let bici = bicycles[i];   
-    const {weight} = bici;
-
-    if (biciWeight > weight) {
-        biciWeight = weight;
+    if (lowerWeight > weight) {
+        lowerWeight = weight;
     } 
 
-}
+    if (element.weight == lowerWeight) {
+        nameBicycle = element.name;
+    }
+});
 
-console.log(biciWeight)
+console.log(lowerWeight)
+
+bicycleResultDom.innerHTML = `La bicicletta da corsa piu' leggera si chiama "${nameBicycle}" e ha un peso di ${lowerWeight} Kg.`;
 
