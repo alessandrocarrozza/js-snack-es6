@@ -31,6 +31,7 @@ let lowerWeight = bicycles[0].weight;
 // variabile che conterrà il nome della bici piu' leggera
 let = nameBicycle = "";
 
+
 // ciclo per determinare la bici piu' leggera
 bicycles.forEach(element => {
     const {weight} = element;
