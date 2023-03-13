@@ -55,7 +55,8 @@ soccerTeams.forEach(element => {
 
 
 
-const teamNomeFalli = soccerTeams.map(({teamName, falliSubiti}) => {
+const teamNomeFalli = soccerTeams.map((team) => {
+    const {teamName, falliSubiti} = team;
     return {teamName, falliSubiti};
 });
 
